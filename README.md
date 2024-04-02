@@ -19,3 +19,8 @@ jupyter notebook
 ```shell
 pytest leet_code
 ```
+
+## black
+```shell
+black leet_code
+```

@@ -23,7 +23,7 @@ def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[Binar
     q = deque([root])
     while q:
         k = len(q)
-        limit = (2 * k + idx)
+        limit = 2 * k + idx
         while idx < limit:
             parent = q.pop()
 
@@ -74,9 +74,10 @@ def breadth_first_search(root: Optional[BinaryTree]) -> List[Optional[List[int]]
 
     return data
 
+
 def printTree(root):
     if not root:
-        print('None')
+        print("None")
         return
     printTree(root.left)
     print("", root.val, end=" ")

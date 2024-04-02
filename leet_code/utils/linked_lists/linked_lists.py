@@ -1,6 +1,7 @@
 import unittest
 from typing import *
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -14,6 +15,7 @@ def unpack_nodes(head: ListNode):
         data.append(current_node.val)
         current_node = current_node.next
     return data
+
 
 def setup_nodes(node_values):
     head = None
@@ -39,6 +41,7 @@ class TestSolution(unittest.TestCase):
         current_node = self.node_func(node_values)
         test_vals = self.unpack_nodes(current_node)
         self.assertListEqual(node_values, test_vals)
+
 
 if __name__ == "__main__":
     unittest.main()
