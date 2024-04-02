@@ -1,10 +1,12 @@
 # Leet-Code
-Developed using python version `3.12.1`
+Developed with python version `3.12.1`
 
 Repository for leet code solutions and related code.
 
-Binary Trees and Linked List Generators
+`leet_code/utils/binary_trees` and `leet_code/utils/linked_lists`
 
+LeetCode often will have challenges involving linked lists and binary trees. The above dirs 
+contain helper functions for building said binary trees and linked lists
 
 ## setting up notebooks
 ```shell
