@@ -1,5 +1,5 @@
-#Leet-Code
-This code was run using python version `3.12.1`
+# Leet-Code
+Developed using python version `3.12.1`
 
 Repository for leet code solutions and related code.
 
