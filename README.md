@@ -19,7 +19,7 @@ jupyter notebook
 
 ## testing
 ```shell
-pytest leet_code
+pytest tests
 ```
 
 ## black

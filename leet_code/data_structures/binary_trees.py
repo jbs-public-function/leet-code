@@ -1,6 +1,5 @@
 from collections import deque
-import unittest
-from typing import *
+from typing import Optional, List
 
 
 class BinaryTree:
@@ -36,7 +35,7 @@ def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[Binar
             if left_tree:
                 q.appendleft(left_tree)
 
-            if idx + 1 >= len(trees):
+            if idx >= len(trees):
                 return root
 
             right_tree = None if not trees[idx] else BinaryTree(trees[idx])
@@ -73,30 +72,3 @@ def breadth_first_search(root: Optional[BinaryTree]) -> List[Optional[List[int]]
         child_q = tmp_q
 
     return data
-
-
-def printTree(root):
-    if not root:
-        print("None")
-        return
-    printTree(root.left)
-    print("", root.val, end=" ")
-    printTree(root.right)
-
-
-# trees = make_arbitrary_trees([1, None, 3, 4])
-"""
-            1
-        None         3
-                4        None
-"""
-# trees = make_trees([1, 2, 3, 4, 5, 6, 6, 6, 6])
-trees = make_arbitrary_trees([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-trees = make_arbitrary_trees([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
-print(breadth_first_search(trees))
-"""
-                           1
-                2                      3
-            4       5            6           6
-        6      6
-"""
