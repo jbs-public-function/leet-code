@@ -2,14 +2,14 @@ from collections import deque
 from typing import Optional, List
 
 
-class BinaryTree:
+class TreeNode:
     def __init__(self, val, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
 
-def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[BinaryTree]:
+def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[TreeNode]:
 
     if not trees:
         return None
@@ -17,7 +17,7 @@ def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[Binar
     if trees[0] is None:
         return None
 
-    root = BinaryTree(trees[0])
+    root = TreeNode(trees[0])
     idx = 1
     q = deque([root])
     while q:
@@ -29,7 +29,7 @@ def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[Binar
             if idx >= len(trees):
                 return root
 
-            left_tree = None if not trees[idx] else BinaryTree(trees[idx])
+            left_tree = None if not trees[idx] else TreeNode(trees[idx])
             parent.left = left_tree
             idx += 1
             if left_tree:
@@ -38,7 +38,7 @@ def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[Binar
             if idx >= len(trees):
                 return root
 
-            right_tree = None if not trees[idx] else BinaryTree(trees[idx])
+            right_tree = None if not trees[idx] else TreeNode(trees[idx])
             parent.right = right_tree
             idx += 1
 
@@ -49,7 +49,7 @@ def make_arbitrary_trees(trees: Optional[List[Optional[int]]]) -> Optional[Binar
     return root
 
 
-def breadth_first_search(root: Optional[BinaryTree]) -> List[Optional[List[int]]]:
+def breadth_first_search(root: Optional[TreeNode]) -> List[Optional[List[int]]]:
     if root is None:
         return []
 

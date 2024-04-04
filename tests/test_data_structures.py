@@ -2,7 +2,7 @@ import unittest
 from leet_code.data_structures import (
     make_arbitrary_trees,
     breadth_first_search,
-    BinaryTree,
+    TreeNode,
     make_nodes,
     unpack_nodes,
     ListNode,
@@ -77,7 +77,7 @@ class TestDataStructures(unittest.TestCase):
         assert breadth_first_search(None) == []
 
     def test_bfs_none_tree(self):
-        assert breadth_first_search(BinaryTree(None)) == [[None]]
+        assert breadth_first_search(TreeNode(None)) == [[None]]
 
     def test_bfs_even_tree(self):
         root = make_arbitrary_trees([1, 2, 3, 4])
@@ -109,16 +109,16 @@ class TestDataStructures(unittest.TestCase):
         assert test_tree is None
 
     def test_no_children_tree(self):
-        root = BinaryTree(1)
+        root = TreeNode(1)
         test_tree = make_arbitrary_trees([1])
         assert test_tree.val == root.val
         assert test_tree.left is None
         assert test_tree.right is None
 
     def test_odd_tree(self):
-        parent = BinaryTree(val=1)
-        lchild = BinaryTree(val=2)
-        rchild = BinaryTree(val=3)
+        parent = TreeNode(val=1)
+        lchild = TreeNode(val=2)
+        rchild = TreeNode(val=3)
         parent.left = lchild
         parent.right = rchild
 
@@ -128,11 +128,11 @@ class TestDataStructures(unittest.TestCase):
         assert test_tree.right.val == parent.right.val
 
     def test_even_tree(self):
-        parent = BinaryTree(val=1)
-        lchild = BinaryTree(val=2)
-        rchild = BinaryTree(val=3)
+        parent = TreeNode(val=1)
+        lchild = TreeNode(val=2)
+        rchild = TreeNode(val=3)
 
-        lchild_rchild = BinaryTree(val=4)
+        lchild_rchild = TreeNode(val=4)
         lchild.left = lchild_rchild
 
         parent.left = lchild
@@ -144,12 +144,12 @@ class TestDataStructures(unittest.TestCase):
         assert test_tree.left.left.val == lchild_rchild.val
 
     def test_none_stub(self):
-        parent = BinaryTree(val=1)
-        rchild = BinaryTree(val=3)
+        parent = TreeNode(val=1)
+        rchild = TreeNode(val=3)
         parent.right = rchild
 
-        rchild_lchild = BinaryTree(4)
-        rchild.left = BinaryTree(4)
+        rchild_lchild = TreeNode(4)
+        rchild.left = TreeNode(4)
 
         test_tree = make_arbitrary_trees([1, None, 3, 4])
 
