@@ -5,7 +5,7 @@ from leet_code.data_structures import (
     BinaryTree,
     make_nodes,
     unpack_nodes,
-    ListNode
+    ListNode,
 )
 
 
@@ -67,10 +67,10 @@ class TestDataStructures(unittest.TestCase):
         assert root.next.next.next.next is None
 
     def test_mixed_list(self):
-        root = make_nodes([1, None, 'x'])
+        root = make_nodes([1, None, "x"])
         assert root.val == 1
         assert root.next.val is None
-        assert root.next.next.val == 'x'
+        assert root.next.next.val == "x"
         assert root.next.next.next is None
 
     def test_bfs_no_tree(self):
