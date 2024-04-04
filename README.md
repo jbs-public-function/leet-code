@@ -28,7 +28,7 @@ jupyter notebook
 Test linked_list and binary_tree data structure helpers
 
 ```shell
-pytest tests
+make run-tests
 ```
 or
 ```shell
@@ -36,7 +36,21 @@ python -m pytest tests
 ```
 Additionally, leetcode challenges will be written as `unittest.TestCase` class and should be run as tests
 
+Additionally, leetcode challenges will be written as `unittest.TestCase` class and should be run as tests
+
 ## black
+run `black` on `leet_code/*` code
 ```shell
-black leet_code
+make clean-leet-codes
+```
+
+run `black` on `tests/` code
+```shell
+make clean-tests
+```
+
+## github
+To clean up all __local__ github branches besides main
+```shell
+make clean-repos
 ```
