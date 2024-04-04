@@ -1,13 +1,20 @@
 # Leet-Code
-Developed with python version `3.12.1`
+Developed with python version `~3.12.1`
 
 Repository for leet code solutions and related code.
 
-`leet_code/utils/binary_trees` and `leet_code/utils/linked_lists`
+## setting up environment
+```shell
+ python -m venv .venv --prompt leet-code
+```
 
-LeetCode often will have challenges involving linked lists and binary trees. The above dirs 
-contain helper functions for building said binary trees and linked lists
+```shell
+source .venv/bin/activate
+```
 
+```shell
+python -m pip install -r requirements.txt
+```
 ## setting up notebooks
 ```shell
 python -m ipykernel install --user --name leet-code --display-name leet-code
@@ -18,9 +25,16 @@ jupyter notebook
 ```
 
 ## testing
+Test linked_list and binary_tree data structure helpers
+
 ```shell
 pytest tests
 ```
+or
+```shell
+python -m pytest tests
+```
+Additionally, leetcode challenges will be written as `unittest.TestCase` class and should be run as tests
 
 ## black
 ```shell
