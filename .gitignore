@@ -170,12 +170,12 @@ cython_debug/
 tmp/
 cdk.out/
 *.env
-node_modules/
-/.metaflow/
-metaflow.*
 
 # For the Script Monkeys (me)
 *.ipynb*
 .json
 .csv
+
+# PyCharm and VSCode stuff
 .idea
+.vscode
