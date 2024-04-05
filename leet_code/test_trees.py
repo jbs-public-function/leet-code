@@ -31,19 +31,21 @@ class Solution:
 
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         data = []
+
         def depth_first_search(root: Optional[TreeNode]):
             if not root:
                 return
             depth_first_search(root.left)
             data.append(root.val)
             depth_first_search(root.right)
+
         depth_first_search(root)
         return data
 
 
 class TestTrees(unittest.TestCase):
     def test_case_max_depth(self):
-        test_case = [3,9,20,None,None,15,7]
+        test_case = [3, 9, 20, None, None, 15, 7]
         root = make_arbitrary_trees(test_case)
         depth = Solution().maxDepth(root)
 
