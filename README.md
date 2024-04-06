@@ -34,7 +34,7 @@ or
 ```shell
 python -m pytest tests
 ```
-Additionally, leetcode challenges will be written as `unittest.TestCase` class and should be run as tests
+Additionally, leetcode challenges will be written as `unittest.TestCase` classes and should be run as tests
 
 ## black
 run `black` on `leet_code/*` code
