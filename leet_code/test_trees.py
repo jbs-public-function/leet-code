@@ -44,6 +44,9 @@ class Solution:
 
 
 class TestTrees(unittest.TestCase):
+    """
+    Binary tree related tasks
+    """
     def test_case_max_depth(self):
         test_case = [3, 9, 20, None, None, 15, 7]
         root = make_arbitrary_trees(test_case)
