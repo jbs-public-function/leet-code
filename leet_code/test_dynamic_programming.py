@@ -23,5 +23,5 @@ class testDyanmicProgramming(unittest.TestCase):
     def test_pascals_triangle(self):
         numRows = 5
         soln = Solution().generate(numRows)
-        expected_output = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1 ]]
+        expected_output = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
         assert soln == expected_output
