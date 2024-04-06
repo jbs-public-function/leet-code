@@ -19,7 +19,7 @@ class Solution:
         return data
 
 
-class testDyanmicProgramming(unittest.TestCase):
+class Testdyanmicprogramming(unittest.TestCase):
     def test_pascals_triangle(self):
         numRows = 5
         soln = Solution().generate(numRows)
