@@ -1,1 +1,1 @@
-testing gpg key for commit signing
+testing gpg key for commit signingTest fix from https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374?permalink_comment_id=3767413#gistcomment-3767413 in a new terminal
